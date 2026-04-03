@@ -28,9 +28,35 @@ The model is trained using sliding window sequences and optimized with Optuna to
 Hyperparameters:
 
 Window size: 6–24
+
 Hidden size: 32–128
+
 Batch size: 16, 32 or 64
+
 Learning rate: 1e-4 to 1e-2
+
+Optimizer: Adam
+
+Loss function: Mean Squared Error
+
 Number of epochs: 10 epochs during tuning and 30 for the final training after optimization with Optuna.
 
+## RESULTS
+
+Metrics: 
+
+MSE (Mean Squared Error): 0.004446407780051231 
+
+MAE (Mean Absolute Error): 0.03902002424001694  (≈4%) 
+
+RMSE (Root Mean Squared Error): 0.06668139005788071 (≈6.6%)
+
+Visualized predictions for one sensor (real traffic values vs. predicted traffic values):
+
+<img width="1021" height="386" alt="Picture1" src="https://github.com/user-attachments/assets/8cd21b3f-4c7c-45b6-bc36-b6b217eed5fb" />
+
+
+
+The LSTM model shows good performance with low error values (MAE ≈ 4%, RMSE ≈ 6.6%), indicating accurate predictions. The Model follows overall traffic trend. However, it has some difficulty in predicting sudden changes in traffic flow. 
+For more detailed research, it is needed to compare the LSTM model with other models to evaluate and improve prediction performance. The goal of this project is to study the LSTM model and demonstrate how Optuna can be used to optimize the performance.
 
